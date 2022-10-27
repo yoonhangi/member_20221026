@@ -9,10 +9,15 @@
 <html>
 <head>
     <title>메인 페이지</title>
+    <link rel="stylesheet" href="/resources/CSS/bootstrap.min.css">
 </head>
 <body>
-<h2>환영합니다.</h2>
+<div class="container">
+    <h2>${sessionScope.loginEmail}님 환영합니다.</h2>
+    <h2>model값: ${modelEmail}</h2>
 
+    <a href="/">index.jsp</a>
+</div>
 
 </body>
 </html>

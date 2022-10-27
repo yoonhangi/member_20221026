@@ -21,8 +21,14 @@ private MemberRepository memberRepository;
             return false;
         }
     }
-    public MemberDTO login(MemberDTO memberDTO) {
-        return memberRepository.login(memberDTO);
+    public boolean login(MemberDTO memberDTO) {
+
+        MemberDTO member1 =  memberRepository.login(memberDTO);
+        if (member1 != null){
+            return true;
+        } else {
+            return false;
+        }
 
     }
 

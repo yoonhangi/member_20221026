@@ -25,6 +25,7 @@
         <th>name</th>
         <th>age</th>
         <th>mobile</th>
+        <th>삭제</th>
     </tr>
     <c:forEach items="${memberList}" var="member">
     <tr>
@@ -34,9 +35,21 @@
         <td>${member.memberName}</td>
         <td>${member.memberAge}</td>
         <td>${member.memberMobile}</td>
+        <td>
+            <button class="btn btn-danger" onclick="deleteMember(${member.memberId})">삭제</button>
+        </td>
     </tr>
     </c:forEach>
 </table>
 </div>
 </body>
+<script>
+    const deleteMember =(memberId) =>{
+        <%--console.log('${memberList}')--%>
+        console.log("클릭한 id값: ", memberId)
+        // controller로 보내기
+        location.href = "/delete?memberId="+memberId;
+
+    }
+</script>
 </html>

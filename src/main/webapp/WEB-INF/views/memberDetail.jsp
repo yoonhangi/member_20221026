@@ -32,7 +32,6 @@
         <td>${member.memberMobile}</td>
       </tr>
     </table>
-    <a href="/update">수정</a>
 
 </div>
 </body>

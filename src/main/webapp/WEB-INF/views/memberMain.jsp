@@ -17,6 +17,7 @@
     <h2>model값: ${modelEmail}</h2>
 
     <a href="/">index.jsp</a>
+
 </div>
 
 </body>

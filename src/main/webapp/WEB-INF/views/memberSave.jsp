@@ -20,12 +20,12 @@
 <div class="container" id="save-form">
   <h2>회원가입정보</h2>
 <form action="/save" method="post" name="saveForm">
-  <input type="text" name="memberEmail" placeholder="이메일"><br>
+  <input type="text" name="memberEmail" class="form-control" placeholder="이메일"><br>
   <span id="email-input-check"></span>
-  <input type="text" name="memberPassword" placeholder="비밀번호"><br>
-  <input type="text" name="memberName" placeholder="이름"><br>
-  <input type="text" name="memberAge" placeholder="나이"><br>
-  <input type="text" name="memberMobile" placeholder="전화번호"><br>
+  <input type="text" name="memberPassword" class="form-control" placeholder="비밀번호"><br>
+  <input type="text" name="memberName" class="form-control" placeholder="이름"><br>
+  <input type="text" name="memberAge" class="form-control" placeholder="나이"><br>
+  <input type="text" name="memberMobile" class="form-control" placeholder="전화번호"><br>
   <input type="button" value="회원가입" onclick="save()" class="btn btn-primary">
 <%--  <button onclick="btn1Fn()">버튼가입</button>--%>
 </form>

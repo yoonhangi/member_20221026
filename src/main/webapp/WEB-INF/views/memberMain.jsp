@@ -17,8 +17,18 @@
     <h2>model값: ${modelEmail}</h2>
 
     <a href="/">index.jsp</a>
+    <button class="btn btn-warning" onclick="updateForm()">내정보수정하기</button>
+    <button class="btn btn-danger" onclick="logout()">로그아웃</button>
 
 </div>
 
 </body>
+<script>
+    const updateForm = () => {
+        location.href = "/update";
+    }
+    const logout = () => {
+        location.href = "/logout";
+    }
+</script>
 </html>

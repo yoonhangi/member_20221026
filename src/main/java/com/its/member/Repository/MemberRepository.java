@@ -33,4 +33,16 @@ public class MemberRepository {
     public void deleteMember(Long memberId) {
         sql.delete("Member.deleteMember", memberId);
     }
+
+    public MemberDTO findByEmail(String memberEmail) {
+        return sql.selectOne("Member.findByEmail", memberEmail);
+    }
+
+    public int update(MemberDTO memberDTO) {
+        return  sql.update("Member.update", memberDTO);
+    }
+
+    public String emailDuplicateCheck(String memberEmail) { return  sql.selectOne("Member.duplicateCheck", memberEmail);
+    }
+
 }

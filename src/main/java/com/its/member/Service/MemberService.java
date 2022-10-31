@@ -5,6 +5,7 @@ import com.its.member.dto.MemberDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Member;
 import java.util.List;
 
 @Service
@@ -40,10 +41,29 @@ private MemberRepository memberRepository;
         return memberRepository.findByMember(memberId);
     }
 
-
     public void deleteMember(Long memberId) {
         memberRepository.deleteMember(memberId);
     }
 
+    public MemberDTO findByEmail(String memberEmail) {
+        return memberRepository.findByEmail(memberEmail);
+    }
 
+    public boolean update(MemberDTO memberDTO) {
+        int result = memberRepository.update(memberDTO);
+        if (result > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public String emailDuplicateCheck(String memberEmail) {
+        String checkResult = memberRepository.emailDuplicateCheck(memberEmail);
+        if (checkResult == null) {
+            return "ok";
+        } else {
+            return "no";
+        }
+    }
 }
